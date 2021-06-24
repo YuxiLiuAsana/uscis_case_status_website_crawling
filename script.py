@@ -13,7 +13,8 @@ def run(p, start, end):
 		content = soup.find_all("div",class_="rows text-center") # the case status related content, which include the title and the paragraph
 		for c in content:
 			status = c.find('h1').text # this is the status title
-			print(status)
+			content = c.find('p').text
+			print(status, content)
 		i +=1
 	print(str(p) + " finish !")
 	
